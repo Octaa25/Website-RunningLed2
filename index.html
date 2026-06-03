@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ingenieurkunst &amp; Sprache</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;0,700;1,400&amp;family=Hanken+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f9f9ff",
+                        "primary": "#003ec7",
+                        "tertiary-fixed-dim": "#c9c6c2",
+                        "primary-container": "#0052ff",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#e8eeff",
+                        "outline": "#737688",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#233148",
+                        "background": "#f9f9ff",
+                        "secondary-container": "#38fe13",
+                        "on-tertiary-container": "#e7e4e0",
+                        "on-secondary-fixed-variant": "#095300",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#d6e3ff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "inverse-primary": "#b7c4ff",
+                        "on-background": "#0d1c32",
+                        "on-primary-container": "#dfe3ff",
+                        "primary-fixed": "#dde1ff",
+                        "secondary": "#106e00",
+                        "tertiary-container": "#676662",
+                        "surface-container-highest": "#d6e3ff",
+                        "on-surface": "#0d1c32",
+                        "outline-variant": "#c3c5d9",
+                        "tertiary": "#4f4e4b",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#004ced",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "secondary-fixed": "#79ff5b",
+                        "surface-bright": "#f9f9ff",
+                        "surface-container-low": "#f0f3ff",
+                        "secondary-fixed-dim": "#2ae500",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "on-primary-fixed": "#001452",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#107100",
+                        "surface-dim": "#ccdaf8",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#022100",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "surface-container-high": "#dfe8ff",
+                        "tertiary-fixed": "#e5e2dd",
+                        "on-surface-variant": "#434656"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Literata"],
+                        "body-narrative": ["Literata"],
+                        "technical-label": ["JetBrains Mono"],
+                        "body-main": ["Hanken Grotesk"],
+                        "headline-md": ["Literata"],
+                        "button-text": ["Hanken Grotesk"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(56, 254, 19, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #c3c5d9;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-main selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 h-20">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-full">
+<div class="font-display-lg text-[20px] md:text-[28px] lg:text-display-lg font-bold text-primary">
+            Ingenieur &amp; Akademie
+        </div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="font-button-text text-button-text text-primary border-b-2 border-primary pb-1 transition-colors duration-300" href="#hardware">Arduino-Projekt</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="#akademie">Deutschkurs</a>
+<a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Methodik</a>
+</div>
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-button-text text-button-text hover:shadow-lg active:scale-95 transition-all">
+            Kontakt
+        </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface-container-low py-xl" id="hardware">
+<div class="max-w-container-max mx-auto px-gutter grid lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1">
+<span class="font-technical-label text-technical-label text-secondary flex items-center gap-xs mb-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                    PROJEKTSTATUS: AKTIV
+                </span>
+<h1 class="font-display-lg text-[40px] md:text-display-lg mb-md leading-tight text-on-background">Arduino-basiertes <span class="text-primary italic">Lauflicht</span></h1>
+<p class="font-body-main text-body-main text-on-surface-variant mb-lg max-w-xl">
+                    Ein technischer Leitfaden zur Realisierung eines sequenziellen LED-Steuerungssystems in 13 präzisen Schritten – von der Hardware-Bestückung bis zum finalen Quellcode.
+                </p>
+<div class="flex gap-md">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-full font-button-text text-button-text glow-hover transition-all">
+                        Anleitung starten
+                    </button>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative rounded-xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+<img alt="Arduino Lauflicht Projektübersicht" class="w-full aspect-video object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uhgSsBXqrE70ezb6KMMxOh3sB6VfopsKi_KX1MQJwcJW-zHWBePerfcfHtWIoeIOSKiAYKjBWshdyA0pgTbFSjxKXJjCY7S5_w7j_YjdJxkODEFCCZUwd_DhY_A0OQSisxGmQxhioE-wuBg84I9DNFrjo9b9_aDPI-w0mYUIBvyLtp-3s8vd8xpxL5nJUcXPsbVV-DYmEfNpIzvjRRJgPiOpi_evToAxAtBPnncJA5-tjXnP6EKWCCi2175"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 13-Step Technical Section -->
+<section class="py-xl bg-white">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- Navigation Sidebar -->
+<aside class="lg:w-72 flex-shrink-0">
+<div class="sticky top-28 bg-surface-container-low rounded-xl p-sm border border-outline-variant/30 shadow-sm">
+<div class="mb-lg px-sm pt-sm">
+<h3 class="font-headline-md text-[20px] text-on-surface">Projektphasen</h3>
+<p class="font-technical-label text-technical-label text-on-surface-variant uppercase tracking-wider">13 Arbeitsschritte</p>
+</div>
+<nav class="flex flex-col gap-xs max-h-[60vh] overflow-y-auto pr-xs custom-scrollbar">
+<button class="tab-btn flex items-center gap-xs bg-secondary-container text-on-secondary-container rounded-lg p-sm border-l-4 border-secondary transition-all text-left" data-target="phase1" onclick="switchTab('phase1')">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+<span class="font-technical-label text-[11px]">1-3: Vorbereitung &amp; Einrichtung</span>
+</button>
+<button class="tab-btn flex items-center gap-xs text-on-surface-variant p-sm hover:bg-surface-variant/50 transition-all text-left" data-target="phase2" onclick="switchTab('phase2')">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+<span class="font-technical-label text-[11px]">4-6: Verkabelung</span>
+</button>
+<button class="tab-btn flex items-center gap-xs text-on-surface-variant p-sm hover:bg-surface-variant/50 transition-all text-left" data-target="phase3" onclick="switchTab('phase3')">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+<span class="font-technical-label text-[11px]">7-10: Software-Entwicklung</span>
+</button>
+<button class="tab-btn flex items-center gap-xs text-on-surface-variant p-sm hover:bg-surface-variant/50 transition-all text-left" data-target="phase4" onclick="switchTab('phase4')">
+<span class="material-symbols-outlined text-[20px]">checklist</span>
+<span class="font-technical-label text-[11px]">11-13: Test &amp; Abschluss</span>
+</button>
+</nav>
+</div>
+</aside>
+<!-- Tab Content -->
+<div class="flex-grow">
+<!-- Phase 1: Vorbereitung & Erste Schritte -->
+<div class="tab-content block animate-in fade-in duration-500" id="content-phase1">
+<h2 class="font-headline-md text-headline-md mb-lg text-primary">I. Vorbereitung &amp; Entwurf</h2>
+<div class="grid gap-md">
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">1</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Vorbereitung der Werkzeuge und Materialien</h4>
+<p class="text-sm text-on-surface-variant">Bevor Sie beginnen, bereiten Sie alle Komponenten vor, wie z. B. einen Arduino Uno, ein Steckbrett, 8 LEDs, 8 Widerstände (220 Ohm), Jumperkabel und einen PC mit installierter Arduino IDE.</p>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-md">
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">2</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Entwurf der Schaltung</h4>
+<p class="text-sm text-on-surface-variant">Erstellen Sie eine Skizze für die Positionierung der LEDs und der Verkabelung, um den Aufbau zu erleichtern.</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">3</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Einsetzen der LEDs</h4>
+<p class="text-sm text-on-surface-variant">Platzieren Sie die LEDs nacheinander auf dem Breadboard. Achten Sie dabei unbedingt auf die Polarität (Anode/Kathode).</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant/30 mt-md">
+<img alt="Schaltkreisplanung Illustration" class="w-full h-64 object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugBmAxdXPG0nZgQaFuP4hVzCHUXohdkqM4JthwlaWHCEki2RZGK91L4_UC6BeqfuMCQ-Qx2UN6fqMqbGzQApynz1LQvq9ZrrMIb62I8QK20Sxb8oiZvAgbwNCDYdd6Mmw5wM8_uzpf-nwwMMyE9dSDsQcP8Qiw9QSid_xIN5NTxZXDF984iKlwDfCssB7UBNJb1nbuGz9F28r7wDh8OV3Rr5MaInxoLQjgamA2ooGhEFQoH45AtYNDQ5ZPH"/>
+</div>
+</div>
+</div>
+<!-- Phase 2: Verdrahtung -->
+<div class="tab-content hidden" id="content-phase2">
+<h2 class="font-headline-md text-headline-md mb-lg text-primary">II. Elektro- &amp; Kabelinstallationen</h2>
+<div class="grid gap-md">
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">4</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Widerstände einbauen</h4>
+<p class="text-sm text-on-surface-variant">Schließen Sie an jede LED einen 220Ω-Widerstand an, um den Strom zu begrenzen und die LEDs zu schützen.</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">5</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Verbindung zum Arduino</h4>
+<p class="text-sm text-on-surface-variant">Verbinden Sie die positiven Beine der LEDs mit den digitalen Pins 2 bis 9 des Arduino.</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">6</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Überprüfung der Schaltung</h4>
+<p class="text-sm text-on-surface-variant">Kontrollieren Sie alle Verbindungen vor dem Einschalten auf festen Sitz und Korrektheit.</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant/30 mt-md">
+<img alt="Manuelle Verdrahtung des Projekts" class="w-full h-65 object-cover" src="https://i.imgur.com/vncoXvy.jpeg"/>
+</div>
+</div>
+</div>
+<!-- Phase 3: Software -->
+<div class="tab-content hidden" id="content-phase3">
+<h2 class="font-headline-md text-headline-md mb-lg text-primary">III. Software-Entwicklung</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">7</span>
+<div><h4 class="font-bold text-on-surface mb-xs">Arduino IDE öffnen</h4><p class="text-sm text-on-surface-variant">Verbinden Sie den Arduino per USB mit dem Computer und starten Sie die Software.</p></div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">8</span>
+<div><h4 class="font-bold text-on-surface mb-xs">Programm schreiben</h4><p class="text-sm text-on-surface-variant">Erstellen Sie den Code, der die LEDs nacheinander aufleuchten lässt.</p></div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">9</span>
+<div><h4 class="font-bold text-on-surface mb-xs">Programm verifizieren</h4><p class="text-sm text-on-surface-variant">Nutzen Sie die 'Verify'-Funktion in der IDE, um den Code auf Fehler zu prüfen.</p></div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">10</span>
+<div><h4 class="font-bold text-on-surface mb-xs">Programm hochladen</h4><p class="text-sm text-on-surface-variant">Klicken Sie auf 'Upload', um den fertigen Code an den Arduino zu senden.</p></div>
+</div>
+</div>
+</div>
+<!-- Phase 4: Test & Abschluss -->
+<div class="tab-content hidden" id="content-phase4">
+<h2 class="font-headline-md text-headline-md mb-lg text-primary">IV. Testen &amp; Beenden</h2>
+<div class="grid gap-md">
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">11</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Testlauf</h4>
+<p class="text-sm text-on-surface-variant">Beobachten Sie die LEDs. Bei korrektem Aufbau leuchten sie nun nacheinander als Lauflicht.</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">12</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Fehlerbehebung</h4>
+<p class="text-sm text-on-surface-variant">Falls nötig, prüfen Sie Verbindungen, LED-Ausrichtung, Widerstandswerte oder den Code.</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-outline-variant/20 flex gap-md items-start">
+<span class="flex-shrink-0 w-8 h-8 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold">13</span>
+<div>
+<h4 class="font-bold text-on-surface mb-xs">Abschluss und Dokumentation</h4>
+<p class="text-sm text-on-surface-variant">Ordnen Sie die Kabel und halten Sie das Ergebnis mit Fotos oder Videos fest.</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md border border-outline-variant/30 mt-md">
+<img alt="Abschließender Funktionstest" class="w-full h-64 object-cover" src="https://i.imgur.com/rTzrTnm.jpeg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Section -->
+<section class="py-xl bg-[#FDFBF7]" id="akademie">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl">
+<h2 class="font-display-lg text-[32px] md:text-display-lg text-on-background mb-sm">Meine Reise in der deutschen Sprache</h2>
+<p class="font-body-narrative italic text-on-surface-variant">Reflexion meiner Sprachreise</p>
+</div>
+<div class="grid lg:grid-cols-12 gap-lg items-start">
+<div class="lg:col-span-7">
+<div class="bg-white p-lg md:p-xl rounded-xl border border-[#E0DDD7] shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-surface-container-highest/10 rounded-full -mr-16 -mt-16"></div>
+<h3 class="font-headline-md text-[24px] md:text-headline-md mb-lg border-l-4 border-primary pl-md italic">Meine Lernerfahrung</h3>
+<div class="font-body-narrative text-[18px] md:text-body-narrative text-on-surface leading-relaxed space-y-md">
+<p>Zu Beginn fühlte sich Deutsch sehr schwierig an. Es gab so viele neue Wörter, die ich noch nie gehört hatte, und die Aussprache war ganz anders als im Indonesischen. Ich habe oft Fehler beim Lesen oder Sprechen gemacht.</p>
+<p>Doch nach ein paar Unterrichtsstunden und viel Übung begann ich, die Inhalte zu verstehen. Ich lernte, wie man sich vorstellt, über Familienmitglieder spricht, Zahlen nennt und einfache Gespräche führt. Unser Lehrer hat uns oft ermutigt, mit Freunden zu üben, was die Atmosphäre im Klassenzimmer sehr lebendig und unterhaltsam machte.</p>
+<p>Ein besonderer Moment war mein erster Dialog vor dem Lehrer. Zuerst war ich nervös und hatte Angst vor Fehlern, aber nachdem ich es versucht hatte, wurde ich viel selbstbewusster. Deutsch zu lernen ist für mich nun eine wirklich schöne und bereichernde Erfahrung.</p>
+</div>
+<div class="mt-xl flex items-center gap-md">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">auto_stories</span>
+</div>
+<div>
+<p class="font-button-text text-button-text font-bold">Persönliche Reflexion</p>
+<p class="text-sm text-on-surface-variant">Kontinuierliche Entwicklung</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-lg">
+<div class="rounded-xl overflow-hidden shadow-lg border border-[#E0DDD7]">
+<img alt="Akademisches Lernumfeld" class="w-1086 h-1448 object-cover" src="https://i.imgur.com/tzWzpSS.jpeg"/>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="bg-white p-md rounded-xl border border-[#E0DDD7] hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-primary mb-sm group-hover:scale-110 transition-transform">trending_up</span>
+<p class="font-technical-label text-[10px] text-on-surface-variant uppercase mb-xs">Status</p>
+<p class="font-button-text font-bold">Lernfortschritt</p>
+</div>
+<div class="bg-white p-md rounded-xl border border-[#E0DDD7] hover:bg-surface-container-low transition-colors group">
+<span class="material-symbols-outlined text-secondary mb-sm group-hover:scale-110 transition-transform">psychology</span>
+<p class="font-technical-label text-[10px] text-on-surface-variant uppercase mb-xs">Fokus</p>
+<p class="font-button-text font-bold">Sprachgefühl</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center p-lg max-w-container-max mx-auto gap-lg">
+<div class="font-display-lg text-[20px] md:text-[24px] text-primary font-bold">
+            Ingenieurkunst &amp; Germanistik
+        </div>
+<div class="flex flex-wrap justify-center gap-lg">
+<a class="font-body-main text-on-surface-variant hover:text-secondary transition-colors" href="#">Impressum</a>
+<a class="font-body-main text-on-surface-variant hover:text-secondary transition-colors" href="#">Datenschutz</a>
+<a class="font-body-main text-on-surface-variant hover:text-secondary transition-colors" href="#">Glossar</a>
+</div>
+<div class="font-body-main text-sm text-on-surface-variant text-center md:text-right">
+            © 2024 Ingenieurkunst &amp; Germanistik. Alle Rechte vorbehalten.
+        </div>
+</div>
+</footer>
+<script>
+    function switchTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+            content.classList.remove('block');
+        });
+
+        const activeContent = document.getElementById('content-' + tabId);
+        if (activeContent) {
+            activeContent.classList.remove('hidden');
+            activeContent.classList.add('block');
+        }
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'border-l-4', 'border-secondary');
+            btn.classList.add('text-on-surface-variant');
+        });
+
+        const activeBtn = document.querySelector(`[data-target="${tabId}"]`);
+        if (activeBtn) {
+            activeBtn.classList.add('bg-secondary-container', 'text-on-secondary-container', 'border-l-4', 'border-secondary');
+            activeBtn.classList.remove('text-on-surface-variant');
+        }
+    }
+
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    });
+</script>
+</body></html>
